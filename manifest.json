@@ -1,0 +1,20 @@
+{
+  "name": "MSRTC Bus Tracker",
+  "short_name": "BusTracker",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#4361ee",
+  "theme_color": "#4361ee",
+  "icons": [
+    {
+      "src": "icons/bus-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/bus-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bus Tracking App</title>
+    <title>MSRTC Bus Tracking</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <h2>🚌 Live Bus Tracking</h2>
-    <div id="map"></div>
+    <div id="delay-banner" class="delay-banner hidden">Bus is delayed beyond scheduled time</div>
+    <div class="container">
+        <h2>🚌 MSRTC Live Bus Tracking</h2>
+        
+        <div class="controls">
+            <div class="search-container">
+                <input type="text" id="bus-search" placeholder="Enter bus number or route">
+                <button id="search-btn">Search</button>
+            </div>
+            <div class="bus-info">
+                <div id="bus-details">
+                    <p>Select a bus to view details</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="map"></div>
+    </div>
+
+    <div class="status">Live Tracking Active</div>
 
     <script type="module" src="script.js"></script>
-
     <script>
         function initMap() {
             if (typeof window.initializeApp === 'function') {
@@ -21,7 +39,7 @@
 
         function loadGoogleMaps() {
             const script = document.createElement('script');
-            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC-D4ZIMVxXUrBz78FzaruGPLIeQowtKUk&loading=async&callback=initMap';
+            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC-D4ZIMVxXUrBz78FzaruGPLIeQowtKUk&loading=async&callback=initMap&libraries=geometry';
             script.async = true;
             script.defer = true;
             document.head.appendChild(script);
@@ -29,7 +47,5 @@
 
         document.addEventListener('DOMContentLoaded', loadGoogleMaps);
     </script>
-
-    <div class="status">Live Tracking Active</div>
 </body>
 </html>

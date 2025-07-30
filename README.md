@@ -1,30 +1,41 @@
-# 🚌 Real-Time Bus Tracking System
+# MSRTC Live Bus Tracking Prototype
 
-A live bus tracking application that visualizes real-time bus movements on an interactive map using Firebase and Google Maps API.
+A web-based live bus tracking system for Maharashtra State Road Transport Corporation (MSRTC) using HTML, CSS, and vanilla JavaScript.
 
-## ✨ Features
+## Features
 
-- **Real-time tracking** - Monitor bus movements with live updates
-- **Firebase Backend** - Cloud database for storing location data
-- **Interactive Map** - Google Maps integration with custom bus marker
-- **Responsive Design** - Works on desktop and mobile devices
-- **Live Status Indicator** - Visual confirmation of active tracking
+- Real-time tracking of multiple MSRTC buses on different routes
+- Interactive Google Maps interface with bus markers
+- Bus search functionality by bus number or route
+- Detailed bus information including:
+  - Current location (coordinates)
+  - Current speed
+  - ETA to destination
+  - Route progress
+  - Delay status
+- Automatic delay detection with visual alerts
+- Push notifications for delayed buses (via Firebase Cloud Messaging)
+- Progressive Web App (PWA) support
+- Responsive design works on mobile and desktop
 
-## 🛠️ Technologies Used
+## Technologies Used
 
-- ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-- ![Google Maps](https://img.shields.io/badge/Google%20Maps-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white)
-- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+- **Frontend**: HTML5, CSS3, JavaScript (ES6)
+- **Mapping**: Google Maps JavaScript API
+- **Realtime Database**: Firebase Realtime Database
+- **Push Notifications**: Firebase Cloud Messaging
+- **Hosting**: Can be deployed on Firebase Hosting or any static web server
 
-## 🚀 Getting Started
+## Setup Instructions
 
 ### Prerequisites
-- Google Maps API key
-- Firebase project with Realtime Database
+
+- Google Maps API key (with Maps JavaScript API enabled)
+- Firebase project with Realtime Database and Cloud Messaging enabled
 
 ### Installation
-1. Clone the repository
+
+1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/bus-tracking-app.git
+   git clone https://github.com/yourusername/msrtc-bus-tracking.git
+   cd msrtc-bus-tracking
