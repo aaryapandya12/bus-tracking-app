@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bus Tracking App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h2>🚌 Live Bus Tracking</h2>
+    <div id="map"></div>
+
+    <script type="module" src="script.js"></script>
+
+    <script>
+        function initMap() {
+            if (typeof window.initializeApp === 'function') {
+                window.initializeApp();
+            }
+        }
+
+        function loadGoogleMaps() {
+            const script = document.createElement('script');
+            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC-D4ZIMVxXUrBz78FzaruGPLIeQowtKUk&loading=async&callback=initMap';
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+        }
+
+        document.addEventListener('DOMContentLoaded', loadGoogleMaps);
+    </script>
+</body>
+</html>
