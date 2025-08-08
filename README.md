@@ -37,5 +37,5 @@ A web-based live bus tracking system for Maharashtra State Road Transport Corpor
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/msrtc-bus-tracking.git
+   git clone https://github.com/aaryapandya12/bus-tracking-app.git
    cd msrtc-bus-tracking
